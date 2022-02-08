@@ -1,11 +1,9 @@
 package com.init.application.controller.role;
 
-import com.init.application.common.PermissionUtils;
 import com.init.application.dto.role.RoleRequestDto;
 import com.init.application.service.role.IRoleService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;

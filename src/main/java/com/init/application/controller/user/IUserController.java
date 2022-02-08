@@ -30,7 +30,7 @@ public interface IUserController {
     @ApiOperation(value = "API to register user")
     @ApiResponses(value = {@ApiResponse(code = 200, message = "Post SuccessFully")})
     @PostMapping("/register")
-    ResponseEntity registerUser(UserRequestDto userRequestDto);
+    ResponseEntity registerUser(@RequestBody UserRequestDto userRequestDto);
 
     // ---------------
     // Get list user
@@ -74,7 +74,7 @@ public interface IUserController {
     @ApiOperation(value = "API to login")
     @ApiResponses(value = {@ApiResponse(code = 200, message = "Get SuccessFully")})
     @PostMapping("/login")
-    ResponseEntity login(LoginRequestDto loginDto);
+    ResponseEntity login(@RequestBody LoginRequestDto loginDto);
 
     // ---------------
     // Logout

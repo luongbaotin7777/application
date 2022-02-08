@@ -20,7 +20,7 @@ public class UserController implements IUserController {
     }
 
     @Override
-    @PreAuthorize(PermissionUtils.CREATE_USER)
+//    @PreAuthorize(PermissionUtils.CREATE_USER)
     public ResponseEntity createUserByAdmin(AdminCreateDto adminCreateDto) {
         return new ResponseEntity<>(userService.createUserByAdmin(adminCreateDto), HttpStatus.OK);
     }
@@ -37,7 +37,7 @@ public class UserController implements IUserController {
     }
 
     @Override
-    @PreAuthorize(PermissionUtils.VIEW_USER)
+//    @PreAuthorize(PermissionUtils.VIEW_USER)
     public ResponseEntity getDetailUser(UUID userId) {
         return new ResponseEntity<>(userService.findById(userId), HttpStatus.OK);
     }
@@ -48,7 +48,7 @@ public class UserController implements IUserController {
     }
 
     @Override
-    @PreAuthorize(PermissionUtils.UPDATE_USER)
+//    @PreAuthorize(PermissionUtils.UPDATE_USER)
     public ResponseEntity updateUserByAdmin(UUID userId, UpdateUserByAdminDto updateUserByAdminDto) {
         return new ResponseEntity<>((userService.updateUserByAdmin(userId, updateUserByAdminDto)), HttpStatus.OK);
     }

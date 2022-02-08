@@ -81,7 +81,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(ApiUtils.USER + "/register").permitAll()
                 .antMatchers(ApiUtils.USER + "/login").permitAll()
                 .antMatchers(ApiUtils.USER + "/refresh-token").permitAll()
-                .anyRequest().authenticated()
+//                .anyRequest().authenticated()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(myAuthenticationEntryPoint)
                 .and()
